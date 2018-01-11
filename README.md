@@ -6,4 +6,7 @@ Learning about Gulp starting from Overview, Installation, Basics, Developing an 
 
 * [x] Installing Gulp
 * [x] Creating a Gulp Project
-* [ ] Determining Folder Structure
+* [x] Determining Folder Structure
+* [x] Writing Your First Gulp Task
+* [x] Preprocessing with Gulp
+* [ ] //-- TODO
