@@ -1,0 +1,23 @@
+{
+	"name": "learn-gulp",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Learning about Gulp basics",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/palashmon/learn-gulp.git"
+	},
+	"author": "Palash Mondal",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/palashmon/learn-gulp/issues"
+	},
+	"homepage": "https://github.com/palashmon/learn-gulp#readme",
+	"devDependencies": {
+		"gulp": "3.9.1"
+	}
+}
