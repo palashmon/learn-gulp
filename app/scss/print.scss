@@ -1,0 +1,25 @@
+$primetext: #f00; //variable
+$alert: yellow; //variable
+@mixin round_corners {
+	-webkit-border-radius: 10px;
+	-mox-border-radius: 10px;
+	border-radius: 10px;
+}
+
+body {
+	background: goldenrod;
+}
+
+h1 {
+	color: $primetext;
+}
+
+h2 {
+	color: $alert;
+}
+
+.call_box {
+	border: 1px solid #ccc;
+	padding: 10px;
+	@include round_corners;
+}

@@ -1,0 +1,15 @@
+body {
+  background: goldenrod; }
+
+h1 {
+  color: #f00; }
+
+h2 {
+  color: yellow; }
+
+.call_box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  -webkit-border-radius: 10px;
+  -mox-border-radius: 10px;
+  border-radius: 10px; }
