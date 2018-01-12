@@ -10,4 +10,5 @@ Learning about Gulp starting from Overview, Installation, Basics, Developing an 
 * [x] Writing Your First Gulp Task
 * [x] Preprocessing with Gulp
 * [x] Globbing patterns
+* [x] Watching Sass files for changes
 * [ ] //-- TODO
