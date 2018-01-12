@@ -1,13 +1,7 @@
-body {
-  background: goldenrod; }
-
-h1 {
-  color: #f00; }
-
-h2 {
+h5 {
   color: yellow; }
 
-.call_box {
+.call-box {
   border: 1px solid #ccc;
   padding: 10px;
   -webkit-border-radius: 10px;

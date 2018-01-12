@@ -2,4 +2,10 @@
   width: 71.42857%; }
 
 body {
-  background-color: skyblue; }
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  line-height: 1.5;
+  background-color: antiquewhite;
+  padding: 30px; }

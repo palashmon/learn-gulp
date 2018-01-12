@@ -6,19 +6,11 @@ $alert: yellow; //variable
 	border-radius: 10px;
 }
 
-body {
-	background: goldenrod;
-}
-
-h1 {
-	color: $primetext;
-}
-
-h2 {
+h5 {
 	color: $alert;
 }
 
-.call_box {
+.call-box {
 	border: 1px solid #ccc;
 	padding: 10px;
 	@include round_corners;
