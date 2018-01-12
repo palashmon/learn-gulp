@@ -11,4 +11,5 @@ Learning about Gulp starting from Overview, Installation, Basics, Developing an 
 * [x] Preprocessing with Gulp
 * [x] Globbing patterns
 * [x] Watching Sass files for changes
+* [x] Live reloading with Browser Sync
 * [ ] //-- TODO
