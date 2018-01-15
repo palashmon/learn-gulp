@@ -18,4 +18,6 @@ Learning about Gulp starting from Overview, Installation, Basics, Developing an 
 * [x] Watching Sass files for changes
 * [x] Live reloading with Browser Sync
 * [x] Optimizing CSS and JavaScript files
+* [x] Optimizing Images
+* [x] Copying Fonts to Dist
 * [ ] //-- TODO
