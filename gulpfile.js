@@ -7,6 +7,8 @@ const gulpIf = require('gulp-if');
 const cssnano = require('gulp-cssnano');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
+const del = require('del');
+const runSequence = require('run-sequence');
 
 // Our first task
 gulp.task('hello', () => {
@@ -36,7 +38,7 @@ gulp.task('useref', () =>
 gulp.task('sass', () =>
 	gulp
 		.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
-		.pipe(sass()) // Converts Sass to CSS with gulp-sass
+		.pipe(sass().on('error', sass.logError)) // Converts Sass to CSS with gulp-sass
 		.pipe(gulp.dest('app/css'))
 		.pipe(
 			browserSync.reload({
@@ -47,21 +49,30 @@ gulp.task('sass', () =>
 
 gulp.task('images', () =>
 	gulp
-		.src('app/images/**/*.+(png|jpg|gif|svg)')
+		.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
 		.pipe(cache(imagemin())) // Caching images that ran through imagemin
 		.pipe(gulp.dest('dist/images'))
 );
 
-gulp.task('fonts', () => {
-	return gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts'));
-});
+gulp.task('fonts', () => gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts')));
 
-// Watching Sass files for changes
-// browserSync and sass must be completed before watch is allowed to run.
-gulp.task('watch', ['browserSync', 'sass', 'useref'], () => {
+// Watchers
+gulp.task('watch', () => {
 	gulp.watch('app/scss/**/*.scss', ['sass']);
-
-	// Reloads the browser whenever HTML or JS files change
 	gulp.watch('app/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
+});
+
+// Cleaning
+gulp.task('clean', () => del.sync('dist').then(cb => cache.clearAll(cb)));
+gulp.task('clean:dist', () => del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']));
+
+// Build Sequences
+// ---------------
+gulp.task('default', callback => {
+	runSequence(['sass', 'browserSync'], 'watch', callback);
+});
+
+gulp.task('build', callback => {
+	runSequence('clean:dist', 'sass', ['useref', 'images', 'fonts'], callback);
 });
