@@ -20,4 +20,5 @@ Learning about Gulp starting from Overview, Installation, Basics, Developing an 
 * [x] Optimizing CSS and JavaScript files
 * [x] Optimizing Images
 * [x] Copying Fonts to Dist
-* [ ] //-- TODO
+* [x] Cleaning up generated files automatically
+* [x] Combining Gulp tasks
